@@ -127,7 +127,7 @@
   }
 }
 .hero-image-wrapper {
-  perspective: 1000px;
+  perspective: 1000px; /* image scroll */
 }
 
 .hero-image {
@@ -139,7 +139,7 @@
 
 .hero-image.scrolled {
   transform: rotateX(0deg) scale(1) translateY(40px);
-}
+} /* to trigger back that image */
 
 .grid-background {
   position: fixed;
@@ -165,10 +165,10 @@
 }
 @layer utilities {
   .gradient {
-    @apply bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600;
+    @apply bg-linear-to-b from-gray-400 via-gray-200 to-gray-600;
   }
   .gradient-title {
-    @apply bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600 
+    @apply bg-linear-to-b from-gray-400 via-gray-200 to-gray-600 
          font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2;
   }
 }

@@ -4,13 +4,13 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { JSX } from "react/jsx-runtime";
 
-const HeroSection = () => {
+const HeroSection = (): JSX.Element => {
   const imageRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const imageElement = imageRef.current;
-
     if (!imageElement) return;
 
     const handleScroll = () => {
@@ -37,7 +37,7 @@ const HeroSection = () => {
             <br />
             Professional Success
           </h1>
-          <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
+          <p className="mx-auto max-w-150 text-muted-foreground md:text-xl">
             Advance your career with personalized guidance, interview prep, and
             AI-powered tools for job success.
           </p>
@@ -55,7 +55,7 @@ const HeroSection = () => {
               src="/banner.png"
               width={1280}
               height={720}
-              alt="Dashboard Preview"
+              alt="Banner Prepgen"
               className="rounded-lg shadow-2xl border mx-auto"
               priority
             />
